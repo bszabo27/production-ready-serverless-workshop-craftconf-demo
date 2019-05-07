@@ -1,4 +1,6 @@
-const { REGION, STAGE } = process.env
+
+const REGION = "eu-west-1"
+const STAGE  = "dev"
 
 const AWS = require('aws-sdk')
 AWS.config.region = REGION
@@ -49,7 +51,7 @@ let restaurants = [
 ];
 
 const getTableName = async () => {
-  return `restaurants-${STAGE}-yancui`
+  return `restaurants-${STAGE}-barnaszabo`
 }
 
 const run = async () => {
